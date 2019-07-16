@@ -1,3 +1,11 @@
+"""
+@author: aarcosg
+project: https://github.com/aarcosg/traffic-sign-detection
+@author: yyuuliang
+project: https://github.com/yyuuliang/tf-api-example
+"""
+
+
 import warnings
 import numpy as np
 import os

@@ -25,6 +25,13 @@ Example usage:
         --output_dir=/home/user/pet/output
 """
 
+"""
+@author: aarcosg
+project: https://github.com/aarcosg/traffic-sign-detection
+@author: yyuuliang
+project: https://github.com/yyuuliang/tf-api-example
+"""
+
 import hashlib
 import io
 import logging
