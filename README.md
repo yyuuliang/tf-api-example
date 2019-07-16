@@ -1,5 +1,8 @@
 # TF Object-Detection API Example
 
+## Acknowledgement
+The project is inspired by @aarcosg's [traffic sign detection project](https://github.com/aarcosg/traffic-sign-detection),  some code in ref.py and scripts/create_tfrecord.py are directly from their work.   Thanks!  
+
 ## Setup
 
 - Download TF Object-Detection API from [here](https://github.com/tensorflow/models), then follow the instruction [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md) to finish the install.
