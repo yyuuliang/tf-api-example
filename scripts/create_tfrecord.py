@@ -33,9 +33,6 @@ import os
 import PIL.Image
 import tensorflow as tf
 
-import sys
-sys.path.append('..')
-sys.path.append('models/research') 
 
 from object_detection.utils import dataset_util
 from object_detection.utils import label_map_util
@@ -136,7 +133,6 @@ def create_tf_record(output_filename,
 
   # Read ground truth csv
   df = pd.read_csv(gt_path, delimiter=';', names=('file', 'xMin', 'yMin', 'xMax', 'yMax', 'classId'))
-  # df['file'] = df['file'].str.replace('ppm', 'jpg')
 
   for idx, example in enumerate(examples):
     if idx % 100 == 0:
@@ -173,7 +169,7 @@ def main(_):
   label_map = label_map_util.load_labelmap(FLAGS.label_map_path)
   categories = label_map_util.convert_label_map_to_categories(label_map, max_num_classes=num_classes, use_display_name=True)
 
-  logging.info('Reading from GTSDB dataset.')
+  logging.info('Reading from dataset.')
   image_dir = data_dir
   examples_gt_path = os.path.join(data_dir, 'gt.txt')
   examples_list = ['%05d.jpg' % x for x in range(num_total)]

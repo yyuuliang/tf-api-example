@@ -93,8 +93,7 @@ class traffic_sign_recognation:
                     line_thickness=6)
                 fstr = self.TEST_IMAGE_PATH.split('/')
                 retname = fstr[len(fstr)-1].split('.')[0]
-                # cv2.imwrite('samples/ret/'+retname+'.jpg', image_np)
-                cv2.imwrite('test-images/ret.jpg', image_np)
+                cv2.imwrite('test-images/'+retname+'_ret.jpg', image_np)
 
         
         return ret_b, ret_c,ret_p
@@ -102,8 +101,7 @@ class traffic_sign_recognation:
 
 if __name__ == '__main__':
     
-    # the folder contains trained model
-    # PATH_TO_CKPT = '/home/yuhuang/singitlab/cameraprojects/traffic-sign-recognition/weights'
+    # the folder contains exported weights
     PATH_TO_CKPT = 'dataset/autti/exported'
 
     # traffic sign labels list
@@ -115,16 +113,9 @@ if __name__ == '__main__':
     tfc.init_args(PATH_TO_TEST_IMAGE,PATH_TO_CKPT,PATH_TO_LABELS)
     ret_b, ret_c,ret_p = tfc.detect(True)
 
-    # # batch
-    # for i in range(25):
-    #     fname = '{:05d}'.format(i)
-    #     PATH_TO_TEST_IMAGE = 'samples/'+fname+'.jpg'
-    #     tfc.init_args(PATH_TO_TEST_IMAGE,PATH_TO_CKPT,PATH_TO_LABELS)
-    #     ret_b, ret_c,ret_p = tfc.detect(True)
-
     # bounding box results
     print(ret_b)
-    # sign types
+    # class labels
     print(ret_c)
     # scores of predictions
     print(ret_p)
