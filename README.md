@@ -1,3 +1,31 @@
+## TF Object-Detection API Example
+
+### Setup
+
+- Download TF Object-Detection API from [here](https://github.com/tensorflow/models), then copy cognitive_planning and object_detection from models/research and put in your own dictionary.   
+The dict should look like this:  
+
+```bash
+- configs
+- dataset
+-- autti
+- models  
+-- research  
+--- cognitive_planning  
+--- object_detection  
+- scripts
+- pre-train-models
+- test-images
+```
+
+- Download faster_rcnn_resnet50_coco pre-trained model from the [model zoo](https://github.com/tensorflow/models)
+
+
+### Dataset
+
+The dataset used in this example is from [Autti](http://autti.co/), you can downloaded the complete dataset from [here](https://github.com/udacity/self-driving-car/tree/master/annotations)
+
+
 ### Script
 
 Generate tr record
