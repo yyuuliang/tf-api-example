@@ -7,8 +7,8 @@ from PIL import Image
 import glob as glob
 import cv2
 
-from models.research.object_detection.utils import label_map_util
-from models.research.object_detection.utils import visualization_utils as vis_util
+from object_detection.utils import label_map_util
+from object_detection.utils import visualization_utils as vis_util
 
 class traffic_sign_recognation:
 
