@@ -2,7 +2,7 @@
 @author: yyuuliang
 project: https://github.com/yyuuliang/tf-api-example
 
-Convert Autti's csv to gt.txt
+Convert Lisa Traffic Light csv to gt.txt
 """
 
 import os
