@@ -31,6 +31,14 @@ Tensorflow Object Detection API use tf record data in order to train the model. 
 python scripts/create_tfrecord.py --data_dir dataset/autti --output_dir dataset/autti
 ```
 
+Pay attention to these settings in create_tfrecord.py.
+
+```python
+  num_total = 12
+  num_train = 11
+  num_classes = 5
+  ```
+
 ## How to train
 
 And you have everything to train the network. The first step is to use TF API's script to train the model. Modify the train.py's location to your owns.   
