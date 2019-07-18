@@ -49,8 +49,7 @@ import pandas as pd
 flags = tf.app.flags
 flags.DEFINE_string('data_dir', '', 'Root directory to raw gtsdb dataset.')
 flags.DEFINE_string('output_dir', '', 'Path to directory to output TFRecords.')
-flags.DEFINE_string('label_map_path', 'configs/autti_label_map.pbtxt',
-                    'Path to label map proto')
+flags.DEFINE_string('label_map_path', '', 'Path to label map proto')
 FLAGS = flags.FLAGS
 
 def df_to_tf_example(data,
@@ -168,9 +167,9 @@ def create_tf_record(output_filename,
   writer.close()
 
 def main(_):
-  num_total = 12
-  num_train = 11
-  num_classes = 5
+  num_total = 6102
+  num_train = 4500
+  num_classes = 220
 
   data_dir = FLAGS.data_dir
   label_map = label_map_util.load_labelmap(FLAGS.label_map_path)
