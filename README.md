@@ -28,7 +28,7 @@ python scripts/create_gttxt.py
 Tensorflow Object Detection API use tf record data in order to train the model. TF record is a combination of annotation and images files. The scripts/create_tfrecord.py will do the work. Please modify the setting in this file according to your own setting. After that, you will get train.record and val.record at your dataset folder. Update the configs/faster_rcnn_resnet50_coco_autti.config again to use the new location.  
 
 ```bash
-python scripts/create_tfrecord.py --data_dir dataset/autti --output_dir dataset/autti
+python scripts/create_tfrecord.py --data_dir dataset/autti --output_dir dataset/autti --label_map_path configs/autti_label_map.pbtxt
 ```
 
 Pay attention to these settings in create_tfrecord.py.
