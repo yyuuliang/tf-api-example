@@ -25,6 +25,11 @@ The dataset's annotation file is a .csv file. You have to fist convert it into a
 ```bash
 python scripts/create_gttxt.py
 ```
+More scripts are provied in scripts folder. Currently supported dataset:  
+- Autti 
+- LISA traffic light dataset
+- Tsinghua-Tencent 100K traffic sign dataset
+
 Tensorflow Object Detection API use tf record data in order to train the model. TF record is a combination of annotation and images files. The scripts/create_tfrecord.py will do the work. Please modify the setting in this file according to your own setting. After that, you will get train.record and val.record at your dataset folder. Update the configs/faster_rcnn_resnet50_coco_autti.config again to use the new location.  
 
 ```bash
