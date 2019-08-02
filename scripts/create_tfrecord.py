@@ -99,7 +99,7 @@ def df_to_tf_example(data,
     ymax.append(float(obj['bndbox']['ymax']) / height)
     class_name = label_map_dict[classidx]['name']
     classes_text.append(class_name.encode('utf8'))
-    classes.append(classidx)
+    classes.append(classidx+1)
 
   example = tf.train.Example(features=tf.train.Features(feature={
       'image/height': dataset_util.int64_feature(height),
@@ -167,9 +167,9 @@ def create_tf_record(output_filename,
   writer.close()
 
 def main(_):
-  num_total = 6102
-  num_train = 4500
-  num_classes = 220
+  num_total = 3005
+  num_train = 2705
+  num_classes = 31
 
   data_dir = FLAGS.data_dir
   label_map = label_map_util.load_labelmap(FLAGS.label_map_path)
@@ -177,7 +177,7 @@ def main(_):
 
   logging.info('Reading from dataset.')
   image_dir = data_dir
-  examples_gt_path = os.path.join(data_dir, 'gt.txt')
+  examples_gt_path = os.path.join(data_dir, 'gt.csv')
   examples_list = ['%05d.jpg' % x for x in range(num_total)]
 
   train_examples = examples_list[:num_train]
