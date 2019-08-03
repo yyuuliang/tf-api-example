@@ -1,5 +1,8 @@
 # Dataset for Autonomous Driving
 
+### Data Augumentation
+I am using this tool for data augumentation. [imgaug](https://imgaug.readthedocs.io/en/latest/source/examples_bounding_boxes.html)  
+
 ### Autti 
 Autti dataset contains vehicles on the road as long as traffic lights annotations. [Download](https://github.com/udacity/self-driving-car/tree/master/annotations).  
 
@@ -7,7 +10,7 @@ Autti dataset contains vehicles on the road as long as traffic lights annotation
 The dataset consists of the original LISA Traffic Light training and test data. [Downlaod](http://cvrr.ucsd.edu/vivachallenge/index.php/traffic-light/traffic-light-detection/)
 
 ### LISA traffic sign dataset
-This might be the only dataset you can find if you want to train a network to do US traffic sign recognition. [Download](http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html)  
+This might be the only dataset you can find if you want to train a network to do US traffic sign recognition. [Download](http://cvrr.ucsd.edu/vivachallenge/index.php/signs/sign-detection/)  
 I have put a class config file for LISA's traffic sign dataset in configs folder. You can use it to create tfrecord.
 
 ### Tsinghua-Tencent 100K traffic sign dataset
